@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU CRIOLLO | MENU</title>
+    <link th:href="@{/resources/css/menus.css}" rel="stylesheet">
+    <link rel="shortcut icon" href="../static/resources/Img/food corner.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <a th:href="@{/index/}"><b>Inicio</b></a>
+			<a th:href="@{/platos/criollo}"><b>Menu Criollo</b></a>
+			<a th:href="@{/platos/frio}"><b>Platos Frios</b></a>					
+			<a th:href="@{/platos/carta}"><b>Platos a la Carta</b></a>
+        </nav>          
+    </header>
+
+    <!-- section -->
+
+
+<main>
+     <section>
+         <div id="panes" class="cajas">
+             <div class="caja" th:each="plato:${platosCriollos}">
+                <img class="img"  th:src="@{/foto/{archivo}(archivo=${plato.archivo})}" alt="">
+                <div class="descripcion">
+                    <h3 th:text="${plato.nombre}"></h3><br>
+                    <h5 th:text="${plato.descripcion}"></h5>                                
+                </div>
+                <div class="precio">
+                    <p>   Desde S/. <b th:text="${plato.precio}"></b></p>                      
+                </div>               
+                <div class="contacto">
+                    <p><i>Nuestras redes sociales</i></p>
+                    <div class="redesSociales">
+                       <a href="https://www.facebook.com/pizzerialalinterna/"> <img th:src="@{/font/facebook (1).png}" alt=""></a>
+                        <a href="https://www.facebook.com/pizzerialalinterna/"><img src="./font/instagram (1).png" alt=""></a>
+                    </div>                    
+                </div>
+             </div>
+         </div>
+     </section>
+</main> 
+</body>
+</html>

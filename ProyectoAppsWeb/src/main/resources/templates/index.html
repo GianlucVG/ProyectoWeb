@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/Img/logo.jpeg" type="image/x-icon">
+	<title>MISKUY WASI | Inicio</title>
+	<link th:href="@{/resources/css/styleIndex.css}" rel="stylesheet">
+
+	
+</head>
+<body>
+	<header>
+		<div  class="contenedor">			
+				<div  class="menu" >
+					<a th:href="@{/index/}"><b>Inicio</b></a>
+					<a th:href="@{/platos/criollo}"><b>Menu Criollo</b></a>
+					<a th:href="@{/platos/frio}"><b>Platos Frios</b></a>					
+					<a th:href="@{/platos/carta}"><b>Platos a la Carta</b></a>
+				</div>	
+				
+				<div class="textos">
+					<h5>Bienvenido a</h5>
+					<h1>MISKUY WASI</h1>
+					<p class="p1"><b>Ordena a MISKUY WASI y disfruta los mejores platos a tu gusto, recién hechos y con los mejores ingredientes premium de Peru <br> Atencion las 24 horas del dia y con un personal entrenado <br> </b> <b class="b">Un restaurante que fomenta las relaciones y alimenta los corazones</b></p>
+					<div class="btn"><a href="#footer"><b class="b">Platos Premium</b></a></div>
+				</div>		
+		</div>
+	</header>	 
+</body>
+</html>
